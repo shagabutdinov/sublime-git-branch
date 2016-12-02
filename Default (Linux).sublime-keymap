@@ -1,0 +1,99 @@
+[
+  {
+    "keys": ["ctrl+u", "ctrl+e"],
+    "command": "open_git_branch_switcher",
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+    ]
+  },
+
+  {
+    "keys": ["ctrl+u", "e"],
+    "command": "open_git_branch_switcher",
+    "args": {
+      "all": true,
+    },
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+    ]
+  },
+
+  {
+    "keys": ["tab"],
+    "command": "create_git_branch",
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+      {
+        "key": "search_panel_name",
+        "operator": "regex_contains",
+        "operand": "switch_git_branch",
+      }
+    ]
+  },
+
+  {
+    "keys": ["ctrl+s"],
+    "command": "switch_to_git_branch",
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+      {
+        "key": "search_panel_name",
+        "operator": "regex_contains",
+        "operand": "switch_git_branch",
+      }
+    ]
+  },
+
+  {
+    "keys": ["ctrl+d"],
+    "command": "delete_git_branch",
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+      {
+        "key": "search_panel_name",
+        "operator": "regex_contains",
+        "operand": "switch_git_branch",
+      }
+    ]
+  },
+
+  {
+    "keys": ["ctrl+alt+d"],
+    "command": "delete_git_branch",
+    "args": {
+      "force": true,
+    },
+    "context": [
+      {
+        "key": "setting.sublime_enhanced_keybindings",
+        "operator": "equal",
+        "operand": true,
+      },
+      {
+        "key": "search_panel_name",
+        "operator": "regex_contains",
+        "operand": "switch_git_branch",
+      }
+    ]
+  },
+]

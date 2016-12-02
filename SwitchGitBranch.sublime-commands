@@ -1,0 +1,13 @@
+[
+  {
+    "caption": "SwitchGitBranch: show local branches",
+    "command": "open_git_branch_switcher",
+  }
+  {
+    "caption": "SwitchGitBranch: show all branches",
+    "command": "open_git_branch_switcher",
+    "args": {
+      "all": true,
+    },
+  }
+]
