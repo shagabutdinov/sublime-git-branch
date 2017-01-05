@@ -2,6 +2,7 @@ import sublime
 import sublime_plugin
 import subprocess
 import os
+import time
 
 from QuickSearchEnhanced.quick_search import panels
 
@@ -131,6 +132,7 @@ class OpenGitBranchSwitcher(sublime_plugin.WindowCommand):
       if branch.startswith(prefix):
         branch = branch[len(prefix):]
 
+    time.sleep(0.25)
     command = ['git', 'checkout', branch]
     if raw_branch != branch:
       command = ['git', 'checkout', '-b', branch, raw_branch]
