@@ -18,7 +18,9 @@ def show_output(text):
   })
 
 def get_path():
-  return sublime.active_window().project_data()['folders'][0]['path']
+  return os.path.dirname(
+    sublime.active_window().active_view().file_name(),
+  )
 
 def get_branches(all = False):
   command = ['git', 'branch']
@@ -27,7 +29,11 @@ def get_branches(all = False):
 
   raw_branches = \
     subprocess \
-      .check_output(command, stderr = subprocess.STDOUT, cwd = get_path()) \
+      .check_output(
+        command,
+        stderr = subprocess.STDOUT,
+        cwd = get_path()
+      ) \
       .decode('utf-8') \
       .split("\n")
 

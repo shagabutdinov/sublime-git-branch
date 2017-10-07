@@ -1,6 +1,6 @@
 [
   {
-    "keys": ["ctrl+u", "ctrl+e"],
+    "keys": ["ctrl+u", "ctrl+g"],
     "command": "open_git_branch_switcher",
     "context": [
       {
@@ -12,7 +12,7 @@
   },
 
   {
-    "keys": ["ctrl+u", "e"],
+    "keys": ["ctrl+u", "g"],
     "command": "open_git_branch_switcher",
     "args": {
       "all": true,
