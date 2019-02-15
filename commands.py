@@ -18,9 +18,11 @@ def show_output(text):
   })
 
 def get_path():
-  return os.path.dirname(
-    sublime.active_window().active_view().file_name(),
-  )
+  filename = sublime.active_window().active_view().file_name()
+  if filename != None:
+    return os.path.dirname(filename)
+
+  return sublime.active_window().folders()[0]
 
 def get_branches(all = False):
   command = ['git', 'branch']
